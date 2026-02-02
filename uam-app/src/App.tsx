@@ -1,13 +1,28 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from 'react';
+import { createRoot } from 'react-dom/client';
 
-function App() {
+function MyForm() {
+  const [name, setName] = useState("");
+
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+    setName(e.target.value);
+  }
 
   return (
-    <div className="App">
-      <h1>Hello World!</h1>
-    </div>
+    <form>
+      <label>Enter your name:
+        <input
+          type="text" 
+          value={name}
+          onChange={handleChange}
+        />
+      </label>
+      <p>Current value: {name}</p>
+    </form>
   )
 }
 
-export default App
+createRoot(document.getElementById('root')!).render(
+  <MyForm />
+);
+export default MyForm
