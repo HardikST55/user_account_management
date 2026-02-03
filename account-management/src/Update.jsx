@@ -50,14 +50,14 @@ const Update = () => {
     // Update the context user state
     login({ ...user, ...form });
     setSuccess("Update successful!");
-    setTimeout(() => setSuccess(""), 3000); // Assuming /view is the view page
+    setTimeout(() => setSuccess(""), 3000); // Clear success message after 3 seconds
   };
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 bg-dark">
       <div className="row justify-content-center">
         <div className="col-md-6">
-          <div className="card">
+          <div className="card bg-secondary text-white">
             <div className="card-body">
               <h2 className="card-title text-center mb-4">Update User</h2>
               <form onSubmit={handleSubmit}>

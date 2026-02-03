@@ -42,10 +42,10 @@ const Register = () => {
   };
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 bg-dark">
       <div className="row justify-content-center">
         <div className="col-md-6">
-          <div className="card">
+          <div className="card bg-secondary text-white">
             <div className="card-body">
               <h2 className="card-title text-center mb-4">Register</h2>
               <form onSubmit={handleSubmit}>
@@ -92,14 +92,14 @@ const Register = () => {
                   {errors.password && <div className="text-danger">{errors.password}</div>}
                 </div>
                 {success && <div className="alert alert-success">{success}</div>}
-                <button type="submit" className="btn btn-success w-100">Register</button>
+                <button type="submit" className="btn btn-primary w-100">Register</button>
               </form>
             </div>
             <div className="card-body text-center">
               <p className="mb-0">
                 Already have an account?{' '}
                 <span
-                  style={{ color: 'blue', cursor: 'pointer', textDecoration: 'underline' }}
+                  style={{ color: 'yellow', cursor: 'pointer', textDecoration: 'underline' }}
                   onClick={() => navigate('/')}
                 >
                   Login here
