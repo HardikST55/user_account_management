@@ -1,4 +1,5 @@
 import { createContext, useState, useContext } from "react";
+import { Navigate } from "react-router-dom";
 
 const AuthContext = createContext({});
 
@@ -22,4 +23,14 @@ export function AuthProvider({ children }) {
 
 export function useAuth() {
   return useContext(AuthContext);
+}
+
+export function ProtectedRoute({ children }) {
+  const { user } = useAuth();
+
+  if (user === null) {
+    return <Navigate to="/" replace />;
+  }
+
+  return children;
 }

@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Login from './Login'
 import Register from './Register'
 import Update from './update'
+import { ProtectedRoute } from './Auth'
 
 function App() {
   return (
@@ -11,7 +12,11 @@ function App() {
       <Routes>
         <Route path='/' element={<Login />} />
         <Route path='/register' element={<Register />} />
-        <Route path='/update/:id' element={<Update/>}/>
+        <Route path='/update/:id' element={
+          <ProtectedRoute>
+            <Update/>
+          </ProtectedRoute>
+        }/>
       </Routes>
     </BrowserRouter>
   )
