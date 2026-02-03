@@ -2,7 +2,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Login from './Login'
 import Register from './Register'
-import Update from './update'
+import Update from './Update'
 import { ProtectedRoute } from './Auth'
 
 function App() {
