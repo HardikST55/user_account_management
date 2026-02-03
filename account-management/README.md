@@ -21,7 +21,7 @@ A modern web application for managing user accounts with authentication, registr
 
 ## Prerequisites
 
-- Node.js (v14 or higher)
+- Node.js (v16 or higher)
 - npm or yarn package manager
 
 ## Installation
