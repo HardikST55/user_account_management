@@ -3,7 +3,6 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/user_account_management/account-management/',
   plugins: [
     react({
       babel: {

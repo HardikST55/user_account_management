@@ -7,7 +7,6 @@ import { ProtectedRoute } from './Auth'
 
 function App() {
   return (
-    // <h1>User Account Management</h1>
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Login />} />
